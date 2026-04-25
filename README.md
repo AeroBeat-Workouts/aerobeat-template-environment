@@ -7,7 +7,7 @@ UGC environments (levels, lighting, skyboxes) for AeroBeat.
 *   **Type:** Environments (Art)
 *   **License:** **CC BY-NC 4.0**
 *   **Dependencies:**
-    *   `aerobeat-core` (Required foundation for shared environment/resource contracts)
+    *   `aerobeat-asset-core` (Canonical shared asset/resource contract)
 
 ## GodotEnv development flow
 
@@ -30,7 +30,7 @@ cd .testbed
 godotenv addons install
 ```
 
-That installs the pinned `aerobeat-core` foundation plus GUT into `.testbed/addons/`.
+That restores this repo's current dev/test manifest into `.testbed/addons/`. Canonically, this template belongs to the Asset lane and should describe its shared contract in terms of `aerobeat-asset-core`.
 
 ### Open the workbench
 
@@ -69,7 +69,7 @@ godot --headless --path .testbed --script addons/gut/gut_cmdln.gd \
 ## Validation notes
 
 - `.testbed/addons.jsonc` is the committed dev/test dependency contract.
-- The manifest pins `aerobeat-core` to `v0.1.0` and GUT to `main`.
+- The current manifest still pins the transition-era `aerobeat-core` package key to `v0.1.0` alongside GUT `main`. Canonical lane ownership is `aerobeat-asset-core`.
 - Repo-local unit tests live under `.testbed/tests/`.
 - This template is root-packaged (`subfolder: "/"`) and does not use a `.testbed/src` bridge; environment assets stay under the repo root package boundary.
 
