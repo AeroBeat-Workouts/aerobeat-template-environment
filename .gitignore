@@ -6,6 +6,9 @@ export_presets.cfg
 # Imported translations (automatically generated from CSV files)
 *.translation
 
+# Godot-generated UID sidecars
+*.uid
+
 # Mono-specific ignores
 .mono/
 data_*/
